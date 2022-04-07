@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="page-header">
+    <h1>Encontrar orden</h1>
+    <p>Introducir el numero de orden:</p>
+        <br>
+            <form action="/find_order" method="post">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_id">Id</span>
+                    <input type="text" class="form-control" name="id" aria-label="Sizing example input" aria-describedby="inputGroup_id">
+                </div>
+                <br >
+                <input class="btn btn-primary" type="submit" name="form" value="Submit" />
+            </form>
+</div>
+    <br>
+<div class="page-header">
+    <h1>Eliminar orden</h1>
+    <p>Introducir el numero de orden:</p>
+        <br>
+            <form action="/order_delete" method="post">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_id">Id</span>
+                    <input type="text" class="form-control" name="id" aria-label="Sizing example input" aria-describedby="inputGroup_id">
+                </div>
+                <br >
+                <input class="btn btn-primary" type="submit" name="form" value="Submit" />
+            </form>
+</div>
+{% endblock %}

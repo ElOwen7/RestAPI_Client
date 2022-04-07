@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="page-header">
+    <h1>Pet Form</h1>
+    <p>Enter Pet name:   </p>
+        <br>
+            <form action="/pet_update_detail" method="post">
+                <input type="hidden" id="op" name="op" value="I">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_id">Id</span>
+                    <input type="text" readonly class="form-control" name="id" aria-label="Sizing example input" aria-describedby="inputGroup_idt" value={{value}}>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_name">Name</span>
+                    <input type="text" class="form-control" name="name" aria-label="Sizing example input" aria-describedby="inputGroup_name">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_satus">Satatus</span>
+                    <input type="text" class="form-control" name="status" aria-label="Sizing example input" aria-describedby="inputGroup_name">
+                </div>
+                <br >
+                <input class="btn btn-primary" type="submit" name="form" value="Submit" />
+            </form>
+</div>
+{% endblock %}

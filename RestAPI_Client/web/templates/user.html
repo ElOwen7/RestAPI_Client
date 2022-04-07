@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div id="login" class="form">
+  <form  action="/user_log" method="post">
+    <h1>Login</h1>
+    <p>
+        <label for="username" class="uname" > Nombre de usuario: </label>
+        <input id="username" name="username" required="required" type="text" placeholder="Tu nombre de usuario"/>
+    </p>
+    <p>
+        <label for="password" class="youpasswd"> Contraseña:</label>
+        <input id="password" name="password"  type="password" placeholder="Tu password"  title="Debe contener al menos un número y una letra minúscula y mayúscula, y al menos 8 o más caracteres"/>
+    </p>
+
+    <p class="login button">
+        <input type="submit" value="Login" name="form" />
+    </p>
+  </form>
+</div>
+    <br>
+<div id="register" class="form">
+  <form  action="/create_user" method="post">
+    <h1> Registro</h1>
+    <p>
+        <label for="usernamesignup" class="uname" >Tu nombre</label>
+        <input id="usernamesignup" name="username" required="required" type="text" placeholder="Nombre" />
+    </p>
+    <p>
+        <label for="emailsignup" class="youmail" > Tu email</label>
+        <input id="emailsignup" name="email" type="text" />
+    </p>
+    <p>
+        <label for="passwordsignup" class="youpasswd" >Tu password </label>
+        <input id="passwordsignup" name="password" type="text" title="Debe contener al menos un número y una letra minúscula y mayúscula, y al menos 8 o más caracteres"/>
+    </p>
+    <p class="signin button">
+        <input type="submit" name="form" value="Registro"/>
+    </p>
+  </form>
+</div><br>
+<div>
+    <h1>Eliminar cuenta </h1>
+    <form action="/delete_user" method="post">
+        <label>Eliminar cuenta</label>
+        <input name="username" type="text">
+        <input type="submit" name="form" value="Eiminar">
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block page_content %}
+<div id="update" class="form">
+  <form  action="/update_user" method="post">
+    <h1> Actualizar usuario</h1>
+    <p>
+        <label for="usernamesignup" class="uname" >Tu nombre</label>
+        <input id="usernamesignup" name="username"  type="text" />
+    </p>
+    <p>
+        <label for="emailsignup" class="youmail" > Tu email</label>
+        <input id="emailsignup" name="email" type="text" />
+    </p>
+    <p>
+        <label for="passwordsignup" class="youpasswd" >Tu password </label>
+        <input id="passwordsignup" name="password" type="text" title="Debe contener al menos un número y una letra minúscula y mayúscula, y al menos 8 o más caracteres"/>
+    </p>
+    <p class="signin button">
+        <input type="submit" name="form" value="actualizar"/>
+    </p>
+  </form>
+</div>
+    <div>
+    <h1> encontrar usuario</h1>
+    <form  action="/get_user" method="post">
+        <label  class="uname" >Tu nombre</label>
+        <input  name="username" required="required" type="text"  />
+        <input type="submit" name="form" value="Buscar"/>
+    </form>
+    </div>
+{% endblock %}
